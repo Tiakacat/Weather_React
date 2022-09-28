@@ -1,0 +1,33 @@
+form {
+  max-width: 600px;
+}
+ul {
+  display: block;
+  text-align: left;
+}
+
+.form-control {
+  transition: all 0.5s ease;
+  background: #66bfbf;
+}
+.form-controle:hover {
+  background: #f76b8a;
+}
+
+.row {
+  max-width: 678px;
+  margin-right: -67px;
+  margin-left: 18px;
+  margin-bottom: 10px;
+}
+.col-2 {
+  padding-right: 0px;
+  padding-left: 16px;
+}
+
+.col-4 {
+  padding-left: 11px;
+}
+.col-6 {
+  padding-left: 11px;
+}
