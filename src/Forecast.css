@@ -1,0 +1,54 @@
+.weather-forecast,
+.row {
+  max-width: 830px;
+}
+.card-img-top {
+  width: 50%;
+  margin: 0 auto;
+}
+.row {
+  max-width: 678px;
+  margin-right: -67px;
+  margin-left: 18px;
+  margin-bottom: 10px;
+}
+.col-2 {
+  padding-right: 0px;
+  padding-left: 16px;
+}
+
+.col-4 {
+  padding-left: 11px;
+}
+.col-6 {
+  padding-left: 11px;
+}
+.card-body {
+  text-align: center;
+}
+
+.card {
+  border-radius: 5px;
+  border-color: #17a2b8;
+  border-radius: 5px;
+  box-shadow: rgba(20, 101, 90, 0.8) 0px 2px 2px 0;
+  background: transparent;
+}
+
+.weather-forecast,
+#forecast {
+  margin: 9px 64px 8px -20px;
+}
+
+.row .cityData {
+  margin: 20px 50px 30px -90px;
+}
+.forecast-date,
+.forecast-temp {
+  text-align: center;
+}
+
+.forecast-temp-min {
+  opacity: 50%;
+  text-align: center;
+}
