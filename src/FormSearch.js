@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "./FormSearch.css";
+import WeatherNow from "./WeatherNow";
 
 export default function FormSearch() {
   let [city, setCity] = useState("");
@@ -49,6 +50,8 @@ export default function FormSearch() {
     </form>
   );
 
+  <WeatherNow info={forecast} />;
+
   if (load) {
     return (
       <div className="CurrentForecast">
@@ -59,84 +62,13 @@ export default function FormSearch() {
             Temperature:{Math.round(forecast.temperature_max)}°C/
             {Math.round(forecast.temperature_min)}°C
           </li>
-          <li>Wind: {forecast.wind} km/h</li>
+          <li>Wind: {Math.round(forecast.wind)} km/h</li>
           <li>Humidity: {forecast.humidity}%</li>
           <li>Description: {forecast.description}</li>
           <li>
             <img src={forecast.icon} alt={forecast.description} />
           </li>
         </ul>
-        <div className="WeatherNow">
-          <h1>
-            THE WEATHER IS NOW <br />
-            <div className="additional">...so the life is...</div>
-          </h1>
-          <br />
-
-          <img
-            src="/images/window.jpeg"
-            alt="window view"
-            width="580px"
-            className="main-image"
-          />
-          <br />
-
-          <div className="dataContainer">
-            <div className="myCity">
-              <h2>KYIV </h2>
-              <h3> 11 September 2022</h3>
-            </div>
-            <div className="row">
-              <div className="col-6">
-                <div className="cityData">
-                  <h4>
-                    <b>TEMP:</b> <br />
-                    day/night
-                  </h4>
-                  <span>{Math.round(forecast.temperature_max)}°C</span>/
-                  <span>{Math.round(forecast.temperature_min)}°C/</span>
-                  <div className="units">
-                    <a href="/">°C</a>
-                    <a href="/">°F</a>
-                  </div>
-                </div>
-              </div>
-              <div className="col-6">
-                <div className="cityData">
-                  <h4>
-                    <b>SKY</b>:<br />
-                  </h4>
-                  <img src="icons/01d.png" alt="Clear" width="60px" />
-                </div>
-              </div>
-            </div>
-            <div className="row">
-              <div className="col-6">
-                <div className="cityData">
-                  <h4>
-                    <b>WIND: </b>
-                    <br />
-                    11 km/h
-                  </h4>
-                  <img src="/icons/wind.png" width="60px" alt="wind_icon" />
-                </div>
-              </div>
-              <div className="col-6">
-                <div className="cityData">
-                  <h4>
-                    <b>HUMI: </b>
-                    <br /> 11%
-                  </h4>
-                  <img
-                    src="/icons/droplets.png"
-                    width="60px"
-                    alt="humid_icon"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     );
   } else {
