@@ -1,5 +1,5 @@
 import React from "react";
-import DisplayDate from "./DispayDate";
+import DisplayDate from "./DisplayDate";
 
 export default function WeatherNow(props) {
   return (
