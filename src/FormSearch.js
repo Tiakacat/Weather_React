@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import "./FormSearch.css";
 import WeatherNow from "./WeatherNow";
+import WeatherIcon from "./WeatherIcon";
 
 export default function FormSearch() {
   let [city, setCity] = useState("");
@@ -16,7 +17,7 @@ export default function FormSearch() {
       temperature_min: response.data.main.temp_min,
       wind: response.data.wind.speed,
       humidity: response.data.main.humidity,
-      icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
+      icon: response.data.weather[0].icon,
       description: response.data.weather[0].description,
     });
   }
@@ -66,7 +67,7 @@ export default function FormSearch() {
           <li>Humidity: {forecast.humidity}%</li>
           <li>Description: {forecast.description}</li>
           <li>
-            <img src={forecast.icon} alt={forecast.description} />
+            <WeatherIcon icon={forecast.icon} size={60} width={70} />
           </li>
         </ul>
       </div>
