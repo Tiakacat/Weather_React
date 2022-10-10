@@ -3,7 +3,7 @@ import DisplayDate from "./DisplayDate";
 import WeatherIcon from "./WeatherIcon";
 import FormSearch from "./FormSearch";
 
-export default function WeatherNow(props) {
+export default function WeatherNow(forecast) {
   return (
     <div className="dataContainer">
       <div className="myCity">
