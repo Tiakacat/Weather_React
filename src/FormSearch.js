@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import "./FormSearch.css";
 import WeatherNow from "./WeatherNow";
-import WeatherIcon from "./WeatherIcon";
+// import WeatherIcon from "./WeatherIcon";
 
 export default function FormSearch() {
   let [city, setCity] = useState("");
@@ -56,7 +56,8 @@ export default function FormSearch() {
     return (
       <div className="CurrentForecast">
         {form}
-        <WeatherNow info={forecast} />
+        <WeatherNow />
+        {/* <WeatherNow info={forecast} />
         <ul>
           <li>City: {forecast.name}</li>
           <li>
@@ -69,7 +70,7 @@ export default function FormSearch() {
           <li>
             <WeatherIcon icon={forecast.icon} size={60} width={70} />
           </li>
-        </ul>
+        </ul> */}
       </div>
     );
   } else {
