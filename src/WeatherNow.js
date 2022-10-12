@@ -1,13 +1,12 @@
 import React from "react";
 import DisplayDate from "./DisplayDate";
 import WeatherIcon from "./WeatherIcon";
-import FormSearch from "./FormSearch";
 
-export default function WeatherNow(forecast) {
+export default function WeatherNow(props) {
   return (
     <div className="dataContainer">
       <div className="myCity">
-        <h2 className="text-uppercase">{forecast.name}</h2>
+        <h2 className="text-uppercase">{props.info.name}</h2>
         <h3>
           <DisplayDate date={props.info.date} />
         </h3>
@@ -19,17 +18,8 @@ export default function WeatherNow(forecast) {
               <b>TEMP:</b> <br />
               day/night
             </h4>
-            <span>
-              <FormSearch
-                temperature_max={Math.round(forecast.temperature_max)}
-              />
-            </span>
-            /
-            <span>
-              <FormSearch
-                temperature_min={Math.round(forecast.temperature_min)}
-              />
-            </span>
+            <span>{Math.round(props.info.temperature_max)}</span>/
+            <span>{Math.round(props.info.temperature_min)}</span>
             <div className="units">
               <a href="/">°C</a>
               <a href="/">°F</a>
@@ -41,7 +31,7 @@ export default function WeatherNow(forecast) {
             <h4>
               <b>SKY</b>:<br />
             </h4>
-            <WeatherIcon icon={forecast.icon} size={60} width={70} />
+            <WeatherIcon icon={props.info.icon} size={60} width={70} />
           </div>
         </div>
       </div>
@@ -51,7 +41,7 @@ export default function WeatherNow(forecast) {
             <h4>
               <b>WIND: </b>
               <br />
-              <FormSearch wind={Math.round(forecast.wind)} />
+              {Math.round(props.info.wind)}
             </h4>
             <img src="/icons/wind.png" width="60px" alt="wind_icon" />
           </div>
@@ -61,7 +51,7 @@ export default function WeatherNow(forecast) {
             <h4>
               <b>HUMI: </b>
               <br />
-              <FormSearch humidity={forecast.humidity} />
+              {props.info.humidity}
             </h4>
             <img src="/icons/droplets.png" width="60px" alt="humid_icon" />
           </div>

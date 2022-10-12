@@ -3,8 +3,6 @@ import "./App.css";
 import FormSearch from "./FormSearch";
 import Forecast from "./Forecast";
 import Footer from "./Footer";
-import DisplayDate from "./DisplayDate";
-import WeatherNow from "./WeatherNow";
 
 export default function App() {
   return (
@@ -25,8 +23,6 @@ export default function App() {
             className="main-image"
           />
           <br />
-          <FormSearch />
-          <WeatherNow />
           <Forecast />
           <Footer />
         </div>

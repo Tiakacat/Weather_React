@@ -19,6 +19,7 @@ export default function FormSearch() {
       humidity: response.data.main.humidity,
       icon: response.data.weather[0].icon,
       description: response.data.weather[0].description,
+      date: new Date(response.data.dt * 1000),
     });
   }
 
@@ -51,12 +52,11 @@ export default function FormSearch() {
     </form>
   );
 
-  <WeatherNow info={forecast} />;
-
   if (load) {
     return (
       <div className="CurrentForecast">
         {form}
+        <WeatherNow info={forecast} />
         <ul>
           <li>City: {forecast.name}</li>
           <li>
