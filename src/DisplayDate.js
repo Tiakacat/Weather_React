@@ -20,6 +20,8 @@ export default function DisplayDate(props) {
   if (minutes < 10) {
     minutes = `0${minutes}`;
   }
+  console.log(props.date);
+
   return (
     <div>
       {day} {hours}:{minutes}

@@ -59,3 +59,22 @@
 .col-6 {
   padding-left: 11px;
 }
+
+.celsius-link.active,
+.fahrenheit-link.active {
+  pointer-events: none;
+}
+
+.celsius-link,
+.fahrenheit-link {
+  position: relative;
+  font-size: 16px;
+  top: -26px;
+  margin: 1px -6px 3px 0px;
+}
+.fahrenheit-link:hover {
+  color: #17a2b8;
+}
+.celsius-link:hover {
+  color: #17a2b8;
+}

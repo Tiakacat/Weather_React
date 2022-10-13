@@ -19,13 +19,18 @@ export default function WeatherNow(props) {
               <b>TEMP:</b> <br />
               day/night
             </h4>
-            <span>
-              <WeatherTemperature celsius={props.data.temperature_max} />
-            </span>
-            /
-            <span>
-              <WeatherTemperature celsius={props.data.temperature_min} />
-            </span>
+            <div className="units">
+              <span className="celsius-link">
+                <WeatherTemperature
+                  celsius={props.data.temperature_max}
+                  className="active"
+                />
+              </span>
+              /
+              <span className="fahrenheit-link">
+                <WeatherTemperature celsius={props.data.temperature_min} />
+              </span>
+            </div>
           </div>
         </div>
         <div className="col-6">
