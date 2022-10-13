@@ -35,20 +35,27 @@ export default function FormSearch() {
 
   let form = (
     <form onSubmit={handleSubmit}>
-      <input
-        type="search"
-        placeholder="Enter a city..."
-        autoFocus="on"
-        onChange={findCity}
-        className="form-control shadow w=100"
-      />
-      <button
-        className="btn btn-outline-info shadow"
-        type="submit"
-        value="search"
-      >
-        Let's find!
-      </button>
+      <div className="row">
+        <div className="col-9">
+          <input
+            type="search"
+            placeholder="Enter a city..."
+            autoFocus="on"
+            onChange={findCity}
+            className="form-control shadow w=100"
+          />
+        </div>
+
+        <div className="col-3">
+          <button
+            className="btn btn-outline-info shadow"
+            type="submit"
+            value="search"
+          >
+            Let's find!
+          </button>
+        </div>
+      </div>
     </form>
   );
 

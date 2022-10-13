@@ -9,23 +9,22 @@ export default function App() {
     <div className="WeatherApp">
       <div className="container">
         <FormSearch />
-        <div className="WeatherNow">
-          <h1>
-            THE WEATHER IS NOW <br />
-            <div className="additional">...so the life is...</div>
-          </h1>
-          <br />
 
-          <img
-            src="/images/window.jpeg"
-            alt="window view"
-            width="580px"
-            className="main-image"
-          />
-          <br />
-          <Forecast />
-          <Footer />
-        </div>
+        <h1>
+          THE WEATHER IS NOW <br />
+          <div className="additional">...so the life is...</div>
+        </h1>
+        <br />
+
+        <img
+          src="/images/window.jpeg"
+          alt="window view"
+          width="580px"
+          className="main-image"
+        />
+        <br />
+        <Forecast />
+        <Footer />
       </div>
     </div>
   );
