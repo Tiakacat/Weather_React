@@ -17,17 +17,13 @@
   background: transparent;
 }
 
-.myCity,
-#city {
+.myCity {
   color: #17a2b8;
   font-size: 34px;
   line-height: 1;
   font-weight: 600;
 }
 
-#city {
-  text-transform: uppercase;
-}
 .cityData,
 #temp-day {
   color: rgb(33, 33, 33);

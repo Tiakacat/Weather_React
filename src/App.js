@@ -3,7 +3,6 @@ import "./App.css";
 import FormSearch from "./FormSearch";
 import Forecast from "./Forecast";
 import Footer from "./Footer";
-import WeatherNow from "./WeatherNow";
 
 export default function App() {
   return (
@@ -14,17 +13,17 @@ export default function App() {
           <div className="additional">...so the life is...</div>
         </h1>
         <br />
-        <FormSearch />
+        <FormSearch defaultCity="Kyiv" />
         <div class="row">
-          <div class="col-9">
+          <div class="col-7">
             <img
               src="/images/window.jpeg"
               alt="window view"
               width="580px"
-              className="img-fluid border p-1 shadow rounded mw-75 d-none d-sm-block"
+              className="img-fluid border p-1 shadow rounded d-none d-sm-block"
             />
           </div>
-          <div class="col-3"></div>
+          <div class="col-5"></div>
         </div>
         <br />
         <Forecast />

@@ -4,14 +4,13 @@ import "./FormSearch.css";
 import WeatherNow from "./WeatherNow";
 // import WeatherIcon from "./WeatherIcon";
 
-export default function FormSearch() {
-  let [city, setCity] = useState("");
-  let [forecast, setForecast] = useState({});
-  let [load, setLoad] = useState(false);
+export default function FormSearch(props) {
+  let [city, setCity] = useState(props.defaultCity);
+  let [forecast, setForecast] = useState({ ready: false });
 
   function showForecast(response) {
-    setLoad(true);
     setForecast({
+      ready: true,
       name: response.data.name,
       temperature_max: response.data.main.temp_max,
       temperature_min: response.data.main.temp_min,
@@ -59,13 +58,12 @@ export default function FormSearch() {
     </form>
   );
 
-  if (load) {
+  if (forecast.ready) {
     return (
       <div className="CurrentForecast">
         {form}
-        <WeatherNow />
-        {/* <WeatherNow info={forecast} />
-        <ul>
+        <WeatherNow info={forecast} />
+        {/* <ul>
           <li>City: {forecast.name}</li>
           <li>
             Temperature:{Math.round(forecast.temperature_max)}°C/
