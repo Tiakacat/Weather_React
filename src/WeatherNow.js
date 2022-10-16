@@ -1,7 +1,6 @@
 import React from "react";
 import DisplayDate from "./DisplayDate";
 import WeatherIcon from "./WeatherIcon";
-import WeatherTemperature from "./WeatherTemperature";
 
 export default function WeatherNow(props) {
   return (
@@ -19,17 +18,11 @@ export default function WeatherNow(props) {
               <b>TEMP:</b> <br />
               day/night
             </h4>
+            <span>{Math.round(props.info.temperature_max)}</span>/
+            <span>{Math.round(props.info.temperature_min)}</span>
             <div className="units">
-              <span className="celsius-link">
-                <WeatherTemperature
-                  celsius={props.data.temperature_max}
-                  className="active"
-                />
-              </span>
-              /
-              <span className="fahrenheit-link">
-                <WeatherTemperature celsius={props.data.temperature_min} />
-              </span>
+              <a href="/">°C</a>
+              <a href="/">°F</a>
             </div>
           </div>
         </div>

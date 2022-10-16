@@ -1,15 +1,8 @@
-.dataContainer {
-  width: 200px;
-  float: right;
-  margin-top: -580px;
-}
-
 .dataContainer .myCity {
-  padding: -18px 5px 55px 20px;
-  width: 280px;
   text-align: center;
-  width: 270px;
-  margin: 60px 680px 42px -28px;
+  width: fit-content;
+  margin: 15px auto;
+  padding: 10px 25px;
   border-radius: 5px;
   border-color: #17a2b8;
   color: #17a2b8;
@@ -41,19 +34,12 @@
 }
 
 .cityData {
-  width: 230px;
   text-align: center;
   margin: 10px 5px 5px 10px;
 }
 
 .cityData .row {
-  max-width: 678px;
-  margin-right: -67px;
-  margin-left: 18px;
   margin-bottom: 10px;
-}
-.col-6 {
-  padding-left: 11px;
 }
 
 .celsius-link.active,

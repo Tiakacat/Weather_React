@@ -7,7 +7,7 @@ export default function Footer() {
       <a
         href="https://github.com/Tiakacat/weather_react"
         target="_blank"
-        rel="noreferrer"
+        rel="noopener noreferrer"
       >
         Open-source code
       </a>
@@ -15,7 +15,7 @@ export default function Footer() {
       <a
         href="https://www.instagram.com/tiakacat/"
         target="_blank"
-        rel="noreferrer"
+        rel="noopener noreferrer"
       >
         <strong>Kateryna Gulenok</strong>
       </a>
@@ -25,7 +25,7 @@ export default function Footer() {
         href="https://www.flaticon.com/free-icons/weather"
         title="weather icons"
         target="_blank"
-        rel="noreferrer"
+        rel="noopener noreferrer"
       >
         juicy_fish - Flaticon
       </a>
