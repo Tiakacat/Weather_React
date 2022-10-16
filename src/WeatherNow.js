@@ -1,6 +1,7 @@
 import React from "react";
 import DisplayDate from "./DisplayDate";
 import WeatherIcon from "./WeatherIcon";
+import "./WeatherNow.css";
 
 export default function WeatherNow(props) {
   return (
@@ -18,8 +19,13 @@ export default function WeatherNow(props) {
               <b>TEMP:</b> <br />
               day/night
             </h4>
-            <span>{Math.round(props.info.temperature_max)}</span>/
-            <span>{Math.round(props.info.temperature_min)}</span>
+            <span className="temp-day">
+              {Math.round(props.info.temperature_max)}/
+            </span>
+
+            <span className="temp-night">
+              {Math.round(props.info.temperature_min)}
+            </span>
             <div className="units">
               <a href="/">°C</a>
               <a href="/">°F</a>

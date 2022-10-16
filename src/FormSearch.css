@@ -37,7 +37,7 @@ ul {
   background: #66bfbf;
 }
 .form-controle:hover {
-  background: #f76b8a;
+  background: #f990a7fc;
 }
 
 .form-control {
@@ -45,5 +45,5 @@ ul {
   background: #66bfbf;
 }
 .form-control:hover {
-  background: #f76b8a;
+  background: #f5b0bffc;
 }

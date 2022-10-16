@@ -17,15 +17,14 @@
   font-weight: 600;
 }
 
-.cityData,
-#temp-day {
+.cityData .temp-day {
   color: rgb(33, 33, 33);
   font-size: 46px;
   line-height: 1;
   font-weight: 400;
 }
 
-#temp-night {
+.cityData .temp-night {
   color: rgb(33, 33, 33);
   font-size: 46px;
   line-height: 1;
@@ -36,10 +35,6 @@
 .cityData {
   text-align: center;
   margin: 10px 5px 5px 10px;
-}
-
-col-6 {
-  width: 30% !important;
 }
 
 .cityData .row {
@@ -63,4 +58,19 @@ col-6 {
 }
 .celsius-link:hover {
   color: #17a2b8;
+}
+.cityData .active {
+  cursor: default;
+  text-decoration: none;
+}
+.cityData .units {
+  color: #17a2b8;
+}
+
+.cityData .active:hover {
+  text-decoration: none;
+}
+.units {
+  margin: -2px 22px -29px -3px;
+  font-weight: bold;
 }
