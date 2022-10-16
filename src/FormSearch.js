@@ -79,6 +79,8 @@ export default function FormSearch(props) {
       </div>
     );
   } else {
+    handleSubmit({ preventDefault: function() {} });
+
     return form;
   }
 }

@@ -14,17 +14,14 @@ export default function App() {
         </h1>
         <br />
         <FormSearch defaultCity="Kyiv" />
-        <div class="row">
-          <div class="col-7">
-            <img
-              src="/images/window.jpeg"
-              alt="window view"
-              width="580px"
-              className="img-fluid border p-1 shadow rounded d-none d-sm-block"
-            />
-          </div>
-          <div class="col-5"></div>
-        </div>
+
+        <img
+          src="/images/window.jpeg"
+          alt="window view"
+          width="580px"
+          className="img-fluid border p-1 shadow rounded d-none d-sm-block"
+        />
+
         <br />
         <Forecast />
         <Footer />

@@ -12,7 +12,7 @@ export default function WeatherNow(props) {
         </h3>
       </div>
       <div className="row">
-        <div className="col-6">
+        <div className="col-3">
           <div className="cityData">
             <h4>
               <b>TEMP:</b> <br />
@@ -26,7 +26,7 @@ export default function WeatherNow(props) {
             </div>
           </div>
         </div>
-        <div className="col-6">
+        <div className="col-3">
           <div className="cityData">
             <h4>
               <b>SKY</b>:<br />
@@ -36,24 +36,24 @@ export default function WeatherNow(props) {
         </div>
       </div>
       <div className="row">
-        <div className="col-6">
+        <div className="col-3">
           <div className="cityData">
             <h4>
               <b>WIND: </b>
               <br />
-              {Math.round(props.info.wind)}
+              {Math.round(props.info.wind)} km/h
             </h4>
-            <img src="/icons/wind.png" width="60px" alt="wind_icon" />
+            <img src="/images/wind.png" width="60px" alt="wind_icon" />
           </div>
         </div>
-        <div className="col-6">
+        <div className="col-3">
           <div className="cityData">
             <h4>
               <b>HUMI: </b>
               <br />
-              {props.info.humidity}
+              {props.info.humidity} %
             </h4>
-            <img src="/icons/droplets.png" width="60px" alt="humid_icon" />
+            <img src="/images/droplets.png" width="60px" alt="humid_icon" />
           </div>
         </div>
       </div>

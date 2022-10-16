@@ -38,6 +38,10 @@
   margin: 10px 5px 5px 10px;
 }
 
+col-6 {
+  width: 30% !important;
+}
+
 .cityData .row {
   margin-bottom: 10px;
 }
