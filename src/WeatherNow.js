@@ -22,6 +22,7 @@ export default function WeatherNow(props) {
             </h4>
             <span>
               <WeatherTemperature
+                className="temp-day"
                 maximum={props.info.temperature_max}
                 minimum={props.info.temperature_min}
               />

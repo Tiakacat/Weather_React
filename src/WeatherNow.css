@@ -17,14 +17,14 @@
   font-weight: 600;
 }
 
-.cityData .temp-day {
+.temperature {
   color: rgb(33, 33, 33);
-  font-size: 46px;
+  font-size: 40px;
   line-height: 1;
   font-weight: 400;
 }
 
-.cityData .temp-night {
+.temperature-night {
   color: rgb(33, 33, 33);
   font-size: 46px;
   line-height: 1;
@@ -63,13 +63,13 @@
   cursor: default;
   text-decoration: none;
 }
-.cityData .units {
-  color: #17a2b8;
-}
 
 .cityData .active:hover {
   text-decoration: none;
 }
-.units {
+.unit {
   font-weight: bold;
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
 }
