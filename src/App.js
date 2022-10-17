@@ -13,14 +13,8 @@ export default function App() {
           <div className="additional">...so the life is...</div>
         </h1>
         <br />
-        <FormSearch defaultCity="Kyiv" />
 
-        <img
-          src="/images/window.jpeg"
-          alt="window view"
-          width="580px"
-          className="img-fluid border p-1 shadow rounded d-none d-sm-block"
-        />
+        <FormSearch defaultCity="Kyiv" />
 
         <br />
         <Forecast />

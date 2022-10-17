@@ -62,7 +62,15 @@ export default function FormSearch(props) {
     return (
       <div className="CurrentForecast">
         {form}
-        <WeatherNow info={forecast} />
+        <div className="d-flex">
+          <img
+            src="/images/window.jpeg"
+            alt="window view"
+            width="580px"
+            className="img-fluid border p-1 mt-5 shadow rounded d-none d-sm-block"
+          />
+          <WeatherNow info={forecast} />
+        </div>
         {/* <ul>
           <li>City: {forecast.name}</li>
           <li>
