@@ -40,7 +40,7 @@ export default function DisplayDate(props) {
 
   return (
     <div>
-      {day} {date} {month} {year} {hours}:{minutes}
+      {day} {hours}:{minutes} <br /> {date} {month} {year}
     </div>
   );
 }

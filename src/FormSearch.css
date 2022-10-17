@@ -1,42 +1,9 @@
-.forecast-date,
-.forecast-temp {
-  text-align: center;
-}
-
-.forecast-temp-min {
-  opacity: 50%;
-  text-align: center;
-}
-
-.cityData .active {
-  cursor: default;
-  text-decoration: none;
-}
 .cityData .units {
   color: #17a2b8;
 }
 
-.cityData .active:hover {
-  text-decoration: none;
-}
-.units {
-  font-weight: bold;
-}
-
 form {
   max-width: 600px;
-}
-ul {
-  display: block;
-  text-align: left;
-}
-
-.form-control {
-  transition: all 0.5s ease;
-  background: #66bfbf;
-}
-.form-controle:hover {
-  background: #f990a7fc;
 }
 
 .form-control {

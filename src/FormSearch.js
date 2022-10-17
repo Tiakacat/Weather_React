@@ -12,6 +12,7 @@ export default function FormSearch(props) {
     setForecast({
       ready: true,
       name: response.data.name,
+      country: response.data.sys.country,
       temperature_max: response.data.main.temp_max,
       temperature_min: response.data.main.temp_min,
       wind: response.data.wind.speed,

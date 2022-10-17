@@ -8,7 +8,9 @@ export default function WeatherNow(props) {
   return (
     <div className="dataContainer">
       <div className="myCity">
-        <h2 className="text-uppercase">{props.info.name}</h2>
+        <h2>
+          {props.info.name}, {props.info.country}
+        </h2>
         <h3>
           <DisplayDate date={props.info.date} />
         </h3>
@@ -22,7 +24,6 @@ export default function WeatherNow(props) {
             </h4>
             <span>
               <WeatherTemperature
-                className="temp-day"
                 maximum={props.info.temperature_max}
                 minimum={props.info.temperature_min}
               />
@@ -33,8 +34,9 @@ export default function WeatherNow(props) {
           <div className="cityData">
             <h4>
               <b>SKY</b>:<br />
+              {props.info.description}
+              <WeatherIcon icon={props.info.icon} size={60} width={80} />
             </h4>
-            <WeatherIcon icon={props.info.icon} size={60} width={70} />
           </div>
         </div>
       </div>

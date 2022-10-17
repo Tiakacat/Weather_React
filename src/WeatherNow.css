@@ -1,8 +1,18 @@
+h3 {
+  text-align: center;
+  color: #272044;
+  font-weight: 600;
+}
+
+h4 {
+  text-align: center;
+  text-decoration: bold;
+  color: #17a2b8;
+  font-size: 1.5rem;
+}
 .dataContainer .myCity {
   text-align: center;
-  width: fit-content;
   margin: -50px auto;
-  padding: 10px 25px;
   border-radius: 5px;
   border-color: #17a2b8;
   color: #17a2b8;
@@ -17,9 +27,17 @@
   font-weight: 600;
 }
 
+.myCity h2 {
+  text-transform: uppercase;
+  color: #17a2b8;
+  font-size: 34px;
+  line-height: 1;
+  font-weight: 600;
+}
+
 .temperature {
   color: rgb(33, 33, 33);
-  font-size: 40px;
+  font-size: 46px;
   line-height: 1;
   font-weight: 400;
 }
@@ -34,7 +52,7 @@
 
 .cityData {
   text-align: center;
-  margin: 120px 5px -70px 10px;
+  margin: 105px 5px -70px 10px;
 }
 
 .cityData .row {
@@ -46,13 +64,6 @@
   pointer-events: none;
 }
 
-.celsius-link,
-.fahrenheit-link {
-  position: relative;
-  font-size: 16px;
-  top: -26px;
-  margin: 1px -6px 3px 0px;
-}
 .fahrenheit-link:hover {
   color: #17a2b8;
 }
@@ -72,8 +83,9 @@
   position: relative;
   display: inline-block;
   vertical-align: top;
+  font-size: 25px;
 }
 .dataContainer {
-  margin: 10px -10px 15px 40px;
+  margin: 10px -20px 15px 20px;
   /* padding: 5px 15px; */
 }
