@@ -21,8 +21,10 @@ export default function WeatherNow(props) {
               day/night
             </h4>
             <span>
-              <WeatherTemperature celsius={props.info.temperature_max} />/
-              <WeatherTemperature celsius={props.info.temperature_min} />
+              <WeatherTemperature
+                maximum={props.info.temperature_max}
+                minimum={props.info.temperature_min}
+              />
             </span>
           </div>
         </div>
