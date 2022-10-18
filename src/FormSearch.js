@@ -2,15 +2,17 @@ import React, { useState } from "react";
 import axios from "axios";
 import "./FormSearch.css";
 import WeatherNow from "./WeatherNow";
-// import WeatherIcon from "./WeatherIcon";
+import Forecast from "./Forecast";
 
 export default function FormSearch(props) {
   let [city, setCity] = useState(props.defaultCity);
   let [forecast, setForecast] = useState({ ready: false });
 
   function showForecast(response) {
+    console.log(response.data);
     setForecast({
       ready: true,
+      coordinates: response.data.coord,
       name: response.data.name,
       country: response.data.sys.country,
       temperature_max: response.data.main.temp_max,
@@ -25,7 +27,7 @@ export default function FormSearch(props) {
 
   function handleSubmit(event) {
     event.preventDefault();
-    let apiKey = "a32c253afedf6c44473c5d983e91967b";
+    let apiKey = "0efb4fc16a9ed98dc0b3aafd8491d6ad";
     let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     axios.get(url).then(showForecast);
   }
@@ -72,19 +74,6 @@ export default function FormSearch(props) {
           />
           <WeatherNow info={forecast} />
         </div>
-        {/* <ul>
-          <li>City: {forecast.name}</li>
-          <li>
-            Temperature:{Math.round(forecast.temperature_max)}°C/
-            {Math.round(forecast.temperature_min)}°C
-          </li>
-          <li>Wind: {Math.round(forecast.wind)} km/h</li>
-          <li>Humidity: {forecast.humidity}%</li>
-          <li>Description: {forecast.description}</li>
-          <li>
-            <WeatherIcon icon={forecast.icon} size={60} width={70} />
-          </li>
-        </ul> */}
       </div>
     );
   } else {
