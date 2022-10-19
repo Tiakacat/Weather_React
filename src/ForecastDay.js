@@ -1,27 +1,35 @@
-import React, { useState } from "react";
+import React from "react";
+import WeatherIcon from "./WeatherIcon";
 
-export default function ForecastDay {
+export default function ForecastDay(props) {
+  function day() {
+    let date = new Date(props.info.dt * 1000);
+    let day = date.getDay();
+    let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+    return days[day];
+  }
   return (
     <div className="card">
-              <div className="forecast-date">
-                {" "}
-                {forecastData[0].dt}
-                <b>Sunday</b>
-              </div>
-              <WeatherIcon
-                icon={forecastData[0].weather[0].icon}
-                className="card-img-top"
-                size={60}
-                width={70}
-              />
-              <div className="forecast-temp">
-                <span className="forecast-temp-max">
-                  <b>{Math.round(ForecastData[0].temp.max)}°</b>
-                </span>
-                <span className="forecast-temp-min">
-                  <b>{Math.round(ForecastData[0].temp.min)}°</b>
-                </span>
-              </div>
-            </div>
-  )  
+      <div className="forecast-date">
+        {" "}
+        {props.info.dt}
+        <b>Sunday</b>
+      </div>
+      <WeatherIcon
+        icon={props.info.weather.icon}
+        className="card-img-top"
+        size={60}
+        width={70}
+      />
+      <div className="forecast-temp">
+        <span className="forecast-temp-max">
+          <b>{Math.round(props.info.temp.max)}°</b>
+        </span>
+        <span className="forecast-temp-min">
+          <b>{Math.round(props.info.temp.min)}°</b>
+        </span>
+      </div>
+    </div>
+  );
 }
