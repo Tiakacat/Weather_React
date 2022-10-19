@@ -23,11 +23,12 @@ export default function FormSearch(props) {
       description: response.data.weather[0].description,
       date: new Date(response.data.dt * 1000),
     });
+    console.log(response.data);
   }
 
   function handleSubmit(event) {
     event.preventDefault();
-    let apiKey = "0efb4fc16a9ed98dc0b3aafd8491d6ad";
+    let apiKey = "2a2eaa51d996796495bf456e5b58adf4";
     let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     axios.get(url).then(showForecast);
   }
@@ -73,6 +74,7 @@ export default function FormSearch(props) {
             className="img-fluid border p-1 mt-5 shadow rounded d-none d-sm-block"
           />
           <WeatherNow info={forecast} />
+          <Forecast coordinates={forecast.coordinates} />
         </div>
       </div>
     );
