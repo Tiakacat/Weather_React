@@ -61,7 +61,7 @@ export default function FormSearch(props) {
         </div>
         <div className="col-3">
           <button
-            className="btn btn-outline-info shadow"
+            className="btn btn-outline-danger shadow"
             type="submit"
             value="search"
           >
@@ -72,7 +72,7 @@ export default function FormSearch(props) {
           <button
             type="button"
             onClick={getCurrentLocation}
-            className="btn buttonLocator btn-outline-secondary shadow"
+            className="btn buttonLocator btn-outline-light shadow"
           >
             Current{" "}
             <img src="/images/locator.png" width="15px" alt="locator_icon" />
@@ -88,8 +88,8 @@ export default function FormSearch(props) {
         {form}
         <div className="d-flex">
           <img
-            src="/images/window.jpeg"
-            alt="window view"
+            src="/images/weather.jpg"
+            alt="no bad weather picture"
             width="580px"
             className="img-fluid border p-1 mt-5 shadow rounded d-none d-sm-block"
           />

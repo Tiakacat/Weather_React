@@ -1,18 +1,23 @@
-.cityData .units {
-  color: #17a2b8;
-}
-
 form {
   max-width: 600px;
 }
 
 .form-control {
   transition: all 0.5s ease;
-  background: #66bfbf;
+  background: white;
 }
 .form-control:hover {
-  background: #f5b0bffc;
+  background: #a0bdeb;
 }
 .buttonLocator {
   margin: 0 -48px;
+  transition: all 0.5s ease;
+}
+.btn-outline-light {
+  color: #7b9ef5;
+}
+
+.btn-outline-light:hover {
+  color: white !important;
+  background: #7b9ef5 !important;
 }

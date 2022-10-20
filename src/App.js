@@ -8,8 +8,8 @@ export default function App() {
     <div className="WeatherApp">
       <div className="container">
         <h1>
-          THE WEATHER IS NOW <br />
-          <div className="additional">...so the life is...</div>
+          ALL WEATHER IS GREAT <br />
+          <div className="additional">...just an attitude...</div>
         </h1>
         <br />
 

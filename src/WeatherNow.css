@@ -7,7 +7,7 @@ h3 {
 h4 {
   text-align: center;
   text-decoration: bold;
-  color: #17a2b8;
+  color: #7393cf;
   font-size: 1.5rem;
 }
 .dataContainer .myCity {
@@ -29,7 +29,7 @@ h4 {
 
 .myCity h2 {
   text-transform: uppercase;
-  color: #17a2b8;
+  color: #7393cf;
   font-size: 34px;
   line-height: 1;
   font-weight: 600;
@@ -84,7 +84,7 @@ h4 {
   display: inline-block;
   vertical-align: top;
   font-size: 20px;
-  color: #128597;
+  color: #5279c1;
 }
 .dataContainer {
   margin: 10px -20px 15px 20px;
