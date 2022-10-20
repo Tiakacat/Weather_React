@@ -13,7 +13,7 @@ export default function ForecastDay(props) {
     <div className="card">
       <div className="forecast-date">{day()}</div>
       <WeatherIcon
-        icon={props.info.weather.icon}
+        icon={props.info.weather[0].icon}
         className="card-img-top"
         size={60}
         width={70}
