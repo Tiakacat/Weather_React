@@ -13,3 +13,6 @@ form {
 .form-control:hover {
   background: #f5b0bffc;
 }
+.buttonLocator {
+  margin: 0 -48px;
+}

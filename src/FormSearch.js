@@ -40,7 +40,7 @@ export default function FormSearch(props) {
     let apiKey = "2a2eaa51d996796495bf456e5b58adf4";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?latitude=${position.coords.latitude}&lontitude=${position.coords.longitude}&appid=${apiKey}&units=metric`;
 
-    axios.get(apiUrl).then(handleSubmit);
+    axios.get(apiUrl).then(showForecast);
   }
   function getCurrentLocation(event) {
     event.preventDefault();
@@ -70,11 +70,12 @@ export default function FormSearch(props) {
         </div>
         <div className="col-3">
           <button
+            type="button"
             onClick={getCurrentLocation}
-            className="btn buttonLocator btn-outline-info shadow"
+            className="btn buttonLocator btn-outline-secondary shadow"
           >
             Current{" "}
-            <img src="/images/locator.png" width="20px" alt="locator_icon" />
+            <img src="/images/locator.png" width="15px" alt="locator_icon" />
           </button>
         </div>
       </div>
