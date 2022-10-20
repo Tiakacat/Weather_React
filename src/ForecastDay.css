@@ -1,0 +1,7 @@
+.WeatherIcon {
+  width: 50%;
+  margin: 0 auto;
+}
+.forecast-date {
+  font-weight: bolder;
+}

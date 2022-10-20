@@ -36,10 +36,21 @@ export default function FormSearch(props) {
     setCity(event.target.value);
   }
 
+  function searchLocation(position) {
+    let apiKey = "2a2eaa51d996796495bf456e5b58adf4";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?latitude=${position.coords.latitude}&lontitude=${position.coords.longitude}&appid=${apiKey}&units=metric`;
+
+    axios.get(apiUrl).then(handleSubmit);
+  }
+  function getCurrentLocation(event) {
+    event.preventDefault();
+    navigator.geolocation.getCurrentPosition(searchLocation);
+  }
+
   let form = (
     <form onSubmit={handleSubmit}>
       <div className="row">
-        <div className="col-9">
+        <div className="col-6">
           <input
             type="search"
             placeholder="Enter a city..."
@@ -48,7 +59,6 @@ export default function FormSearch(props) {
             className="form-control shadow w=100"
           />
         </div>
-
         <div className="col-3">
           <button
             className="btn btn-outline-info shadow"
@@ -56,6 +66,15 @@ export default function FormSearch(props) {
             value="search"
           >
             Let's find!
+          </button>
+        </div>
+        <div className="col-3">
+          <button
+            onClick={getCurrentLocation}
+            className="btn buttonLocator btn-outline-info shadow"
+          >
+            Current{" "}
+            <img src="/images/locator.png" width="20px" alt="locator_icon" />
           </button>
         </div>
       </div>
