@@ -12,9 +12,8 @@ export default function Forecast(props) {
   }, [props.coordinates]);
 
   function handleSubmit(response) {
-    setForecastData(response.info.daily);
+    setForecastData(response.data.daily);
     setLoaded(true);
-    console.log(response.info.daily);
   }
   if (loaded) {
     return (

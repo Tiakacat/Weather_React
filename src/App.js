@@ -17,7 +17,6 @@ export default function App() {
         <FormSearch defaultCity="Kyiv" />
 
         <br />
-        <Forecast />
         <Footer />
       </div>
     </div>
