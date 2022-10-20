@@ -89,7 +89,7 @@ export default function FormSearch(props) {
         <div className="d-flex">
           <img
             src="/images/weather.jpg"
-            alt="no bad weather picture"
+            alt="no bad weather"
             width="580px"
             className="img-fluid border p-1 mt-5 shadow rounded d-none d-sm-block"
           />

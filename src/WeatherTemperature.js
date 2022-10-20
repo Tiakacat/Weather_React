@@ -24,7 +24,7 @@ export default function WeatherTemperature(props) {
         </span>
         <span className="unit">
           °C/ {""}
-          <a href="#" onClick={showFahrenheit}>
+          <a href="" onClick={showFahrenheit}>
             °F
           </a>
         </span>
