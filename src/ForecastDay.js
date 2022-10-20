@@ -11,11 +11,7 @@ export default function ForecastDay(props) {
   }
   return (
     <div className="card">
-      <div className="forecast-date">
-        {" "}
-        {props.info.dt}
-        <b>Sunday</b>
-      </div>
+      <div className="forecast-date">{day()}</div>
       <WeatherIcon
         icon={props.info.weather.icon}
         className="card-img-top"
