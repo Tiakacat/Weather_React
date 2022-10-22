@@ -38,7 +38,7 @@ export default function FormSearch(props) {
 
   function searchLocation(position) {
     let apiKey = "2a2eaa51d996796495bf456e5b58adf4";
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?latitude=${position.coords.latitude}&lontitude=${position.coords.longitude}&appid=${apiKey}&units=metric`;
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
 
     axios.get(apiUrl).then(showForecast);
   }
@@ -94,8 +94,8 @@ export default function FormSearch(props) {
             className="img-fluid border p-1 mt-5 shadow rounded d-none d-sm-block"
           />
           <WeatherNow info={forecast} />
-          <Forecast coordinates={forecast.coordinates} />
         </div>
+        <Forecast coordinates={forecast.coordinates} />
       </div>
     );
   } else {
